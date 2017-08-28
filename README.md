@@ -1,4 +1,4 @@
-# DeepRLBootcampRLTricks   
+# DeepRLHacks  
 The Nuts and Bolts of Deep RL Research [John Schulman](http://joschu.net/) (Aug 2017)    
 From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research"
 These are tricks that I wrote down while attending summer Deep RL Bootcamp at UC Berkeley.   

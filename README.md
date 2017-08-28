@@ -1,7 +1,6 @@
 # DeepRLHacks  
-The Nuts and Bolts of Deep RL Research [John Schulman](http://joschu.net/) (Aug 2017)    
-From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research"
-These are tricks that I wrote down while attending summer Deep RL Bootcamp at UC Berkeley.   
+From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   
+These are tricks written down while attending summer Deep RL Bootcamp at UC Berkeley.   
 
 ## Tips to debug new algorithm   
 1. Simplify the problem by using a low dimensional state space environment.      

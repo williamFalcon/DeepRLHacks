@@ -1,6 +1,6 @@
 # DeepRLBootcampRLTricks
 These are tricks that I wrote down while attending summer Deep RL Bootcamp at UC Berkeley.   
-These were discussed by John Schulman on Day 1.
+These were proposed by [John Schulman](http://joschu.net/) on Day 1.
 
 ## Tips to debug new algorithm   
 - Simplify the problem in a game with a low dimentional state space.      

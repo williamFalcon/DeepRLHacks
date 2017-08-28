@@ -1,21 +1,22 @@
-# DeepRLBootcampRLTricks
+# DeepRLBootcampRLTricks   
+The Nuts and Bolts of Deep RL Research [John Schulman](http://joschu.net/) (Aug 2017)    
+From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research"
 These are tricks that I wrote down while attending summer Deep RL Bootcamp at UC Berkeley.   
-These were proposed by [John Schulman](http://joschu.net/) on Day 1.
 
 ## Tips to debug new algorithm   
-1. Simplify the problem by using a low dimentional state space environment.      
+1. Simplify the problem by using a low dimensional state space environment.      
   - John suggested to use the [Pendulum problem](https://gym.openai.com/envs/Pendulum-v0) because the problem has a 2-D state space (angle of pendulum and velocity).    
   - Easy to visualize what the value function looks like and what state the algorithm should be in and how they evolve over time.  
   - Easy to visually spot why something isn't working (aka, is the value function smooth enough and so on).
 
 2. To test if your algorithm is reasonable, construct a problem you know it should work on.   
-  - Ex: For hierarchical reinforcement learning you'd construct a problem with an OBVIOUS huerarchy it should learn. 
+  - Ex: For hierarchical reinforcement learning you'd construct a problem with an OBVIOUS hierarchy it should learn. 
   - Can easily see if it's doing the right thing.   
-  - WARNING: Don't overfit method to your toy problem (realize it's a toy problem).   
+  - WARNING: Don't over fit method to your toy problem (realize it's a toy problem).   
 
 3. Familiarize yourself with certain environments you know well.
   - Over time, you'll learn how long the training should take.   
-  - Know how rewards evololve, etc... 
+  - Know how rewards evolve, etc... 
   - Allows you to set a benchmark to see how well you're doing against your past trials.    
   - John uses the hopper robot where he knows how fast learning should take, and he can easily spot odd behaviors.    
 
@@ -34,7 +35,7 @@ Maybe it's unclear what the features are and what the reward should be, or if it
 
 1. First step: Visualize a random policy acting on this problem.   
   - See where it takes you.    
-  - If random policy on ocasion does the right thing, then high chance RL will do the right thing.   
+  - If random policy on occasion does the right thing, then high chance RL will do the right thing.   
     - Policy gradient will find this behavior and make it more likely.  
   - If random policy never does the right thing, RL will likely also not.   
 
@@ -51,7 +52,7 @@ Maybe it's unclear what the features are and what the reward should be, or if it
 
 4. Have good baseline whenever you see a new problem.   
   - It's unclear which algorithm will work, so have a set of baselines (from other methods)
-    - Crossentropy method   
+    - Cross entropy method   
     - Policy gradient methods 
     - Some kind of Q-learning method (checkout [OpenAI Baselines](https://github.com/openai/baselines) as a starter or [RLLab](https://github.com/rll/rllab) 
 
@@ -61,17 +62,17 @@ Sometimes (often), it's hard to reproduce results from papers. Some tricks to do
 1. Use more samples than needed.    
 2. Policy right... but not exactly
    - Try to make it work a little bit.   
-   - Then tweak hyperparameters to get up to the public performance.   
+   - Then tweak hyper parameters to get up to the public performance.   
    - If want to get it to work at ALL, use bigger batch sizes. 
-     - If batch size is too small, noisy will overpower signal.
+     - If batch size is too small, noisy will overpower signal.  
      - Example: TRPO, John was using too tiny of a batch size and had to use 100k time steps. 
-     - For DQN, best hyperparams: 10k timesteps, 1mm frames in replay buffer.
+     - For DQN, best hyperparams: 10k time steps, 1mm frames in replay buffer.
 
 
 ## Guidelines on-going training process   
 Sanity check that your training is going well.    
 
-1. Look at sensitivity of EVERY hyperparameter
+1. Look at sensitivity of EVERY hyper parameter
   - If algo is too sensitive, then NOT robust and should NOT be happy with it.   
   - Sometimes it happens that a method works one way because of funny dynamics but NOT in general.
 
@@ -83,12 +84,12 @@ Sanity check that your training is going well.
     - How big are the updates?   
   - Standard diagnostics from deep networks   
 
-3. Have a system for continuosly benchmarking code.    
+3. Have a system for continuously benchmarking code.    
   - Needs DISCIPLINE.   
   - Look at performance across ALL previous problems you tried.   
     - Sometimes it'll start working on one problem but mess up performance in others.   
-    - Easy to overfit on a single problem.
-  - Have a battery of benchmarks you run ocationally.   
+    - Easy to over fit  on a single problem.
+  - Have a battery of benchmarks you run occasionally.   
 
 4. Think your algorithm is working but you're actually seeing random noise.   
   - Example: Graph of 7 tasks with 3 algorithms and looks like 1 algorithm might be doing best on all problems, but turns out they're all the same algorithm with DIFFERENT random seeds.   
@@ -96,9 +97,9 @@ Sanity check that your training is going well.
 5. Try different random seeds!!
   - Run multiple times and average.   
   - Run multiple tasks on multiple seeds. 
-    - If not, you're likely to overfit.   
+    - If not, you're likely to over fit.   
 
-6. Additional algorithm modifications might be unecessary    
+6. Additional algorithm modifications might be unnecessary.      
   - Most tricks are ACTUALLY normalizing something in some way or improving your optimization.  
   - A lot of tricks also have the same effect... So you can remove some of them and SIMPLIFY your algorithm (VERY KEY).   
 
@@ -110,7 +111,7 @@ Sanity check that your training is going well.
   - Launch experiments on cloud services and analyze results.   
   - Frameworks to track experiments and results:
     - Mostly uses iPython notebooks.
-    - DBs seem unecessary to store results.   
+    - DBs seem unnecessary to store results.   
 
 
 ## General training strategies
@@ -139,19 +140,19 @@ Sanity check that your training is going well.
   - Determines how far you're giving credit assignment.   
   - Ex: if factor is 0.99, then you're ignoring what happened 100 steps ago... Means you're shortsighted. 
     - Better to look at how that corresponds to real time 
-      - Intuiton, in RL we're usually discretizing time.  
+      - Intuition, in RL we're usually discretizing time.  
       - aka: are those 100 steps 3 seconds of actual time? 
       - what happens during that time?
-  - If TD methods for policy gradient of Value fx extimation, gamma can be close to 1 (like 0.999)
+  - If TD methods for policy gradient of Value fx estimation, gamma can be close to 1 (like 0.999)
     - Algo becomes very stable.   
 
-3. Look to see that problem can actually be solved in the discritized level.  
+3. Look to see that problem can actually be solved in the discretized level.  
   - Example: In game if you're doing frame skip.
     - As a human, can you control it or is it impossible?
     - Look at what random exploration looks like 
-      - Discritisation determines how far your browning motion goes. 
+      - Discretization determines how far your browning motion goes. 
       - If do many actions in a row, then tend to explore further.   
-      - Choose your time discritation in a way that works.
+      - Choose your time discretization in a way that works.
 
 4. Look at episode returns closely.   
   - Not just mean, look at min and max.
@@ -174,7 +175,7 @@ Sanity check that your training is going well.
     - Add entropy bonus.
   - How to measure entropy.   
     - For most policies can compute entropy analytically. 
-      - If continuous usually using a gaussian so can compute differential entropy.  
+      - If continuous usually using a Gaussian so can compute differential entropy.  
     
 2. Look at KL divergence
   - Look at size of updates in terms of KL divergence.   
@@ -184,8 +185,8 @@ Sanity check that your training is going well.
   
 3. Baseline explained variance.   
   - See if value function is actually a good predictor or a reward.   
-    - if negative it might be overfitting or noisy.
-      - Likely need to tune hyperparameters
+    - if negative it might be over fitting or noisy.
+      - Likely need to tune hyper parameters
 
 4. Initialize policy   
   - Very important (more so than in supervised learning).   
@@ -202,7 +203,7 @@ Sanity check that your training is going well.
   - Be patient... DQN converges VERY slowly.   
 
 
-## Bonus from Andreij Karpathy:   
+## Bonus from [Andrej Karpathy](http://cs.stanford.edu/people/karpathy/):   
 1. A good feature can be to take the difference between two frames.   
  - This delta vector can highlight slight state changes otherwise difficult to distinguish.   
 

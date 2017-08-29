@@ -414,10 +414,3 @@ Sanity check that your training is going well.
     - 网上有一个ppt资源[The Nuts and Bolts of Deep RL Research
 ](http://joschu.net/docs/nuts-and-bolts.pdf)。
 
-
-
-
-
-
-
-

@@ -1,3 +1,7 @@
+Add [Chinese version](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##深度强化学习hacks) by (kuhung)[https://github.com/kuhung] 
+
+
+
 # DeepRLHacks  
 From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   
 These are tricks written down while attending summer [Deep RL Bootcamp at UC Berkeley](https://www.deepbootcamp.io/).   
@@ -255,7 +259,7 @@ Sanity check that your training is going well.
     - 经验法则：
        - 观测环境： 确保均值为0，方差为1.
        - 奖赏： 如果你能控制它，就把他缩放到一个合理的维度。
-         - 在所有的数据上都做同样的处理。
+       - 在所有的数据上都做同样的处理。
  - 检查所有的观测环境以及奖赏，以确保没有特别离奇的异常值。
     
 4. 建立一个好的基线，无论在何时看到一个新问题。

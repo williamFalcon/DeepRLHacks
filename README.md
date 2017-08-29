@@ -1,4 +1,4 @@
-Add [Chinese version](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##深度强化学习hacks) by (kuhung)[https://github.com/kuhung] 
+Add [Chinese version](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##深度强化学习hacks) by [kuhung](https://github.com/kuhung) 
 
 
 

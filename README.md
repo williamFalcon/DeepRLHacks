@@ -1,18 +1,19 @@
 Add [Chinese version](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#深度强化学习hacks) by [kuhung](https://github.com/kuhung) 
 
+# 深度增强学习的小技巧
+
 目录
-1. [调试新算法](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##调试新算法的小技巧)（[原文]()）
-2. [调试新任务](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##调试新任务的小技巧)
-3. [将一个问题转化为强化学习](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##将一个问题转化为强化学习的小技巧)
-4. [复现论文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##复现论文)
-5. [对于正在进行的训练的一些处理](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##对于正在进行的训练的一些处理)
-6. [总的训练策略](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##总的训练策略)
-7. [策略优化诊断](https://github.com/kuhung/DeepRLHacks/blob/master/README.md##策略优化诊断)
-8. [Q-Learning 策略](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#Q-Learning策略)
+1. [调试新算法](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#调试新算法的小技巧)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#tips-to-debug-new-algorithm)）
+2. [调试新任务](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#调试新任务的小技巧)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#tips-to-debug-a-new-task)）
+3. [将一个问题转化为强化学习](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#将一个问题转化为强化学习的小技巧)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#tips-to-debug-a-new-task)）
+4. [复现论文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#复现论文)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#reproducing-papers)）
+5. [对于正在进行的训练的一些处理](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#对于正在进行的训练的一些处理)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#guidelines-on-going-training-process)）
+6. [总的训练策略](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#总的训练策略)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#general-training-strategies)）
+7. [策略优化诊断](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#策略优化诊断)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#policy-gradient-diagnostics)）
+8. [Q-Learning 策略](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#Q-Learning策略)（[原文](https://github.com/kuhung/DeepRLHacks/blob/master/README.md#q-learning-strategies)）
 9. [另一个版本的ppt资源
 ](http://joschu.net/docs/nuts-and-bolts.pdf)
 
---- 
 
 # DeepRLHacks  
 From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   

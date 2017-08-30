@@ -53,7 +53,7 @@ Maybe it's unclear what the features are and what the reward should be, or if it
     - It's unclear which algorithm will work, so have a set of baselines (from other methods)
       - Cross entropy method   
       - Policy gradient methods 
-      - Some kind of Q-learning method (checkout [OpenAI Baselines](https://github.com/openai/baselines) as a starter or [RLLab](https://github.com/rll/rllab) 
+      - Some kind of Q-learning method (checkout [OpenAI Baselines](https://github.com/openai/baselines) as a starter or [RLLab](https://github.com/rll/rllab)) 
 
 ## Reproducing papers    
 Sometimes (often), it's hard to reproduce results from papers. Some tricks to do that:   
@@ -109,7 +109,7 @@ Sanity check that your training is going well.
     - Don't spend your whole day watching your code spit out numbers.   
     - Launch experiments on cloud services and analyze results.   
     - Frameworks to track experiments and results:
-      - Mostly uses iPython notebooks.
+      - Mostly use iPython notebooks.
       - DBs seem unnecessary to store results.   
 
 
@@ -133,7 +133,7 @@ Sanity check that your training is going well.
     - PCA Whitening?
       - Could help.
       - Starting to see if it actually helps with neural nets.
-      - Huge scales (-1000, 1000) or (-0.001, 0.001) certainly makes learning slow.   
+      - Huge scales (-1000, 1000) or (-0.001, 0.001) certainly make learning slow.   
 
 2. Parameters that inform discount factors.
     - Determines how far you're giving credit assignment.   
@@ -149,7 +149,7 @@ Sanity check that your training is going well.
     - Example: In game if you're doing frame skip.
       - As a human, can you control it or is it impossible?
       - Look at what random exploration looks like 
-        - Discretization determines how far your browning motion goes. 
+        - Discretization determines how far your Brownian motion goes. 
         - If do many actions in a row, then tend to explore further.   
         - Choose your time discretization in a way that works.
 
@@ -159,7 +159,7 @@ Sanity check that your training is going well.
       - Is your policy ever doing the right thing??
     - Look at episode length (sometimes more informative than episode reward).
       - if on game you might be losing every time so you might never win, but... episode length can tell you if you're losing SLOWER.
-      - Might see a episode length improvement in the beginning but maybe not reward.
+      - Might see an episode length improvement in the beginning but maybe not reward.
 
 
 ## Policy gradient diagnostics   
@@ -174,7 +174,7 @@ Sanity check that your training is going well.
       - Add entropy bonus.
     - How to measure entropy.   
       - For most policies can compute entropy analytically. 
-        - If continuous usually using a Gaussian so can compute differential entropy.  
+        - If continuous, it's usually a Gaussian, so can compute differential entropy.  
     
 2. Look at KL divergence
     - Look at size of updates in terms of KL divergence.   
@@ -184,7 +184,7 @@ Sanity check that your training is going well.
   
 3. Baseline explained variance.   
     - See if value function is actually a good predictor or a reward.   
-      - if negative it might be over fitting or noisy.
+      - if negative it might be overfitting or noisy.
         - Likely need to tune hyper parameters
 
 4. Initialize policy   

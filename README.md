@@ -1,5 +1,5 @@
 # DeepRLHacks  
-From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   
+From a talk [video](https://www.youtube.com/watch?v=8EcdaCk9KaQ&feature=youtu.be) given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   
 These are tricks written down while attending summer [Deep RL Bootcamp at UC Berkeley](https://www.deepbootcamp.io/).   
 
 ## Tips to debug new algorithm   

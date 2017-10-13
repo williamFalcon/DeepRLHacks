@@ -2,7 +2,7 @@
 From a talk given by [John Schulman](http://joschu.net/) titled "The Nuts and Bolts of Deep RL Research" (Aug 2017)   
 These are tricks written down while attending summer [Deep RL Bootcamp at UC Berkeley](https://www.deepbootcamp.io/).   
 
-Update: RL bootcamp just released the [video](https://www.youtube.com/watch?v=8EcdaCk9KaQ&feature=youtu.be) and the rest of the [lectures](https://sites.google.com/view/deep-rl-bootcamp/lectures). 
+**Update**: RL bootcamp just released the [video](https://www.youtube.com/watch?v=8EcdaCk9KaQ&feature=youtu.be) and the rest of the [lectures](https://sites.google.com/view/deep-rl-bootcamp/lectures). 
 
 ## Tips to debug new algorithm   
 1. Simplify the problem by using a low dimensional state space environment.      
